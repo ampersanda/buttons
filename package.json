@@ -1,6 +1,6 @@
 {
   "name": "ampersanda-buttons",
-  "version": "1.0.9",
+  "version": "1.0.91",
   "description": "CSS Buttons",
   "main": "buttons.less",
   "scripts": {
