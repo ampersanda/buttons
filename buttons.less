@@ -9,6 +9,7 @@
   cursor: pointer;
   border: none;
 
+
   color: #fff;
   background: var(--primary);
   padding: 1.2em 3em;
@@ -17,7 +18,45 @@
   border-radius: 60px;
   transition: color .15s ease-in-out, background .15s ease-in-out, box-shadow .15s ease-in-out;
 
-  .on-hover({ background: var(--primary-hover); box-shadow: 0 5px 10px 2px var(--primary-shadow); });
+  .on-hover({
+    background: var(--primary-hover);
+    box-shadow: 0 5px 10px 2px var(--primary-shadow);
+  });
+
+
+  &&--loading {
+    position: relative;
+    user-select: none;
+
+    color: #fff;
+    .apply-after({
+      content: '';
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-top: 2px solid;
+      border-right: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      width: 1.4em;
+      height: 1.4em;
+      margin-top: -.7em;
+      margin-left: -.7em;
+      border-top-color: inherit;
+      color: inherit
+    });
+
+    &.is--dark {
+      color: #9816f4;
+
+      .apply-after({
+        border-top-color: inherit;
+        color: inherit
+      });
+    }
+  }
 
   &&--with-icon {
     display: inline-flex;
@@ -36,7 +75,10 @@
     background: var(--secondary);
     color: #fff;
 
-    .on-hover({ background: var(--secondary-hover); box-shadow: 0 3px 20px var(--secondary-shadow) });
+    .on-hover({
+      background: var(--secondary-hover);
+      box-shadow: 0 3px 20px var(--secondary-shadow)
+    });
 
     &.is--active {
       box-shadow: 0 3px 20px var(--secondary-shadow);
@@ -48,7 +90,9 @@
     border-color: var(--disabled-gray);
     cursor: not-allowed;
 
-    .on-hover({ box-shadow: none });
+    .on-hover({
+      box-shadow: none
+    });
 
     &.is--active {
       box-shadow: none
@@ -59,7 +103,10 @@
     background: var(--danger);
     color: #fff;
 
-    .on-hover({ background: var(--danger-hover); box-shadow: 0 5px 10px 2px var(--danger-shadow); });
+    .on-hover({
+      background: var(--danger-hover);
+      box-shadow: 0 5px 10px 2px var(--danger-shadow);
+    });
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--danger-shadow);
@@ -78,7 +125,10 @@
     background: var(--success);
     color: #fff;
 
-    .on-hover({ background: var(--success-hover); box-shadow: 0 5px 10px 2px var(--success-shadow); });
+    .on-hover({
+      background: var(--success-hover);
+      box-shadow: 0 5px 10px 2px var(--success-shadow);
+    });
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--success-shadow);
@@ -89,7 +139,10 @@
     background: var(--warning);
     color: #fff;
 
-    .on-hover({ background: var(--warning-hover); box-shadow: 0 5px 10px 2px var(--warning-shadow); });
+    .on-hover({
+      background: var(--warning-hover);
+      box-shadow: 0 5px 10px 2px var(--warning-shadow);
+    });
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--warning-shadow);
@@ -100,7 +153,10 @@
     background: var(--info);
     color: #fff;
 
-    .on-hover({ background: var(--info-hover); box-shadow: 0 5px 10px 2px var(--info-shadow); });
+    .on-hover({
+      background: var(--info-hover);
+      box-shadow: 0 5px 10px 2px var(--info-shadow);
+    });
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--info-shadow);
@@ -113,7 +169,10 @@
     border: 1px solid var(--light-border);
     margin: -1px;
 
-    .on-hover({ background: var(--light-hover); box-shadow: 0 3px 20px 0 var(--light-shadow) });
+    .on-hover({
+      background: var(--light-hover);
+      box-shadow: 0 3px 20px 0 var(--light-shadow)
+    });
 
     &.is--active {
       box-shadow: 0 3px 20px 0 var(--light-shadow);
@@ -122,5 +181,15 @@
 
   &.is--active {
     box-shadow: 0 5px 10px 2px var(--primary-shadow);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
   }
 }
