@@ -18,10 +18,10 @@
   border-radius: 60px;
   transition: color .15s ease-in-out, background .15s ease-in-out, box-shadow .15s ease-in-out;
 
-  .on-hover({
+  &:hover, &:focus {
     background: var(--primary-hover);
     box-shadow: 0 5px 10px 2px var(--primary-shadow);
-  });
+  }
 
 
   &&--loading {
@@ -30,7 +30,7 @@
 
     color: transparent;
 
-    &:hover , &:focus  {
+    &:hover, &:focus, *.is--loading {
       background: var(--disabled-gray);
     }
 
@@ -81,12 +81,11 @@
     background: var(--secondary);
     color: #fff;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--secondary-hover);
-      box-shadow: 0 3px 20px var(--secondary-shadow)
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 3px 20px var(--secondary-shadow);
     }
   }
@@ -96,12 +95,7 @@
     border-color: var(--disabled-gray);
     cursor: not-allowed;
 
-    &:hover , &:focus  {
-      box-shadow: none;
-      background: var(--disabled-gray);
-    }
-
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: none;
       background: var(--disabled-gray);
     }
@@ -111,12 +105,11 @@
     background: var(--danger);
     color: #fff;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--danger-hover);
-      box-shadow: 0 5px 10px 2px var(--danger-shadow);
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 5px 10px 2px var(--danger-shadow);
     }
   }
@@ -133,12 +126,11 @@
     background: var(--success);
     color: #fff;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--success-hover);
-      box-shadow: 0 5px 10px 2px var(--success-shadow);
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 5px 10px 2px var(--success-shadow);
     }
   }
@@ -147,12 +139,11 @@
     background: var(--warning);
     color: #fff;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--warning-hover);
-      box-shadow: 0 5px 10px 2px var(--warning-shadow);
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 5px 10px 2px var(--warning-shadow);
     }
   }
@@ -161,12 +152,11 @@
     background: var(--info);
     color: #fff;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--info-hover);
-      box-shadow: 0 5px 10px 2px var(--info-shadow);
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 5px 10px 2px var(--info-shadow);
     }
   }
@@ -177,12 +167,11 @@
     border: 1px solid var(--light-border);
     margin: -1px;
 
-    &:hover , &:focus  {
+    &:hover, &:focus {
       background: var(--light-hover);
-      box-shadow: 0 3px 20px 0 var(--light-shadow)
     }
 
-    &.is--active {
+    &:hover, &:focus, &.is--active {
       box-shadow: 0 3px 20px 0 var(--light-shadow);
     }
   }
