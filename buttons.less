@@ -28,9 +28,9 @@
     position: relative;
     user-select: none;
 
-    color: #fff;
+    color: transparent;
 
-    .apply-after({
+    &::after {
       content: '';
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -38,24 +38,25 @@
       top: 50%;
       left: 50%;
       border-top: 2px solid;
-      border-right: 2px solid transparent;
+      border-right: 2px solid;
       border-radius: 50%;
       animation: spin 0.6s linear infinite;
       width: 1.4em;
       height: 1.4em;
       margin-top: -.7em;
       margin-left: -.7em;
-      border-top-color: #fff;
+      border-color: #fff;
+      border-right-color: transparent;
       color: #fff;
-    });
+    }
 
     &.is--dark {
       color: #9816f4;
 
-      .apply-after({
+      &::after {
         border-top-color: #9816f4;
         color: #9816f4
-      });
+      }
     }
   }
 
@@ -76,10 +77,10 @@
     background: var(--secondary);
     color: #fff;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--secondary-hover);
       box-shadow: 0 3px 20px var(--secondary-shadow)
-    });
+    }
 
     &.is--active {
       box-shadow: 0 3px 20px var(--secondary-shadow);
@@ -91,9 +92,9 @@
     border-color: var(--disabled-gray);
     cursor: not-allowed;
 
-    .on-hover({
+    &:hover , &:focus  {
       box-shadow: none
-    });
+    }
 
     &.is--active {
       box-shadow: none
@@ -104,10 +105,10 @@
     background: var(--danger);
     color: #fff;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--danger-hover);
       box-shadow: 0 5px 10px 2px var(--danger-shadow);
-    });
+    }
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--danger-shadow);
@@ -126,10 +127,10 @@
     background: var(--success);
     color: #fff;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--success-hover);
       box-shadow: 0 5px 10px 2px var(--success-shadow);
-    });
+    }
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--success-shadow);
@@ -140,10 +141,10 @@
     background: var(--warning);
     color: #fff;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--warning-hover);
       box-shadow: 0 5px 10px 2px var(--warning-shadow);
-    });
+    }
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--warning-shadow);
@@ -154,10 +155,10 @@
     background: var(--info);
     color: #fff;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--info-hover);
       box-shadow: 0 5px 10px 2px var(--info-shadow);
-    });
+    }
 
     &.is--active {
       box-shadow: 0 5px 10px 2px var(--info-shadow);
@@ -170,10 +171,10 @@
     border: 1px solid var(--light-border);
     margin: -1px;
 
-    .on-hover({
+    &:hover , &:focus  {
       background: var(--light-hover);
       box-shadow: 0 3px 20px 0 var(--light-shadow)
-    });
+    }
 
     &.is--active {
       box-shadow: 0 3px 20px 0 var(--light-shadow);
