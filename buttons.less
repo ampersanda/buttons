@@ -23,7 +23,6 @@
     box-shadow: 0 5px 10px 2px var(--primary-shadow);
   }
 
-
   &&--loading {
     position: relative;
     user-select: none;
@@ -167,6 +166,10 @@
     border: 1px solid var(--light-border);
     margin: -1px;
 
+    &:hover , &:focus  {
+      box-shadow: none;
+    }
+
     &:hover, &:focus {
       background: var(--light-hover);
     }
@@ -188,5 +191,18 @@
 
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+// sizing
+.btn {
+  &&--max {
+    width: max-content;
+    padding: 0 1.33em;
+    border-radius: 2em;
+  }
+
+  &&--normal {
+    font-size: 1rem;
   }
 }
