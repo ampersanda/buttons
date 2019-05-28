@@ -6,14 +6,12 @@
   cursor: pointer;
   border: none;
 
-
   color: #fff;
   background: var(--primary);
   padding: 1.2em 3em;
   font-size: small;
   display: inline-block;
   border-radius: 60px;
-  transition: color .15s ease-in-out, background .15s ease-in-out, box-shadow .15s ease-in-out;
 
   &:hover, &:focus {
     background: var(--primary-hover);
@@ -161,17 +159,14 @@
     background: var(--light);
     color: #444;
     border: 1px solid var(--light-border);
-    margin: -1px;
-
-    &:hover , &:focus  {
-      box-shadow: none;
-    }
 
     &:hover, &:focus {
       background: var(--light-hover);
+      border-color: var(--light-hover);
+      box-shadow: none;
     }
 
-    &:hover, &:focus, &.is--active {
+    &.is--active {
       box-shadow: 0 3px 20px 0 var(--light-shadow);
     }
   }
@@ -202,4 +197,11 @@
   &&--normal {
     font-size: 1rem;
   }
+}
+
+// animation
+
+.btn.btn--animate {
+  will-change: color, background, box-shadow;
+  transition: all .15s ease;
 }
