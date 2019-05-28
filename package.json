@@ -12,7 +12,5 @@
   ],
   "author": "Ampersanda",
   "license": "ISC",
-  "dependencies": {
-    "ampersanda-lessfiles": "^1.0.4"
-  }
+  "dependencies": {}
 }
